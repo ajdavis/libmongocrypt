@@ -192,7 +192,7 @@ _get_data_key_from_response (kms_response_t *response,
       goto cleanup;
    }
 
-   CRYPT_TRACE ("kms response: %s", tmp_json (&response_body));
+   CRYPT_TRACE ("kms response: %s\n", tmp_json (&response_body));
 
    if (!bson_iter_init_find (&iter, &response_body, "Plaintext")) {
       SET_CRYPT_ERR ("JSON response does not include Plaintext");
