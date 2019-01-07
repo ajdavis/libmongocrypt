@@ -510,7 +510,7 @@ _replace_markings (mongocrypt_t *crypt,
    }
 
    if (!bson_iter_init_find (&iter, reply, "data")) {
-      SET_CRYPT_ERR ("markFields returned ok:0");
+      SET_CRYPT_ERR ("'data' field not found in markFields reply");
       return false;
    }
    /* recurse into array. */
